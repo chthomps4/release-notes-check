@@ -1,5 +1,6 @@
 # release-notes-check
 
+[![CI](https://github.com/chthomps4/release-notes-check/actions/workflows/ci.yml/badge.svg)](https://github.com/chthomps4/release-notes-check/actions/workflows/ci.yml)
 [![Test Release Notes Check](https://github.com/chthomps4/release-notes-check/actions/workflows/test.yml/badge.svg)](https://github.com/chthomps4/release-notes-check/actions/workflows/test.yml)
 
 GitHub Action to enforce release note metadata on pull requests.
@@ -14,7 +15,7 @@ GitHub Action to enforce release note metadata on pull requests.
 
 ## Required labels
 
-Create these labels in your repository before using the action:
+Create these labels in your repository before using the action.
 
 ### Semver labels
 
@@ -60,7 +61,7 @@ jobs:
       pull-requests: read
     steps:
       - name: Run release notes check
-        uses: chthomps4/release-notes-check@v1.2
+        uses: chthomps4/release-notes-check@v1.3
         with:
           require_semver_label: "true"
           release_note_heading: "## Release note"
@@ -106,6 +107,16 @@ Add one of these labels to skip the check:
 - `docs`
 - `internal`
 - `no-release-notes`
+
+## Development
+
+Helpful project files:
+
+- `CONTRIBUTING.md`
+- `RELEASING.md`
+- `SECURITY.md`
+- `.github/workflows/ci.yml`
+- `.github/workflows/test.yml`
 
 ## Notes
 
