@@ -1,0 +1,29 @@
+name: Release Notes Check
+description: Enforce release note metadata on pull requests
+author: chthomps4
+
+inputs:
+  require_semver_label:
+    description: Require a semver label such as major, minor, or patch
+    required: false
+    default: "true"
+  release_note_heading:
+    description: Heading to look for in the pull request body
+    required: false
+    default: "## Release note"
+  exempt_labels:
+    description: Comma-separated labels that skip the check
+    required: false
+    default: "docs,internal,no-release-notes"
+  breaking_labels:
+    description: Comma-separated labels that indicate a breaking change
+    required: false
+    default: "breaking,major"
+
+runs:
+  using: node20
+  main: src/index.js
+
+branding:
+  icon: check-circle
+  color: blue
