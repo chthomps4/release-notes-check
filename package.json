@@ -1,0 +1,14 @@
+{
+  "name": "release-notes-check",
+  "version": "0.1.0",
+  "description": "GitHub Action to enforce release note metadata on pull requests",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.0"
+  }
+}
