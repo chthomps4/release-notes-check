@@ -1,0 +1,52 @@
+name: Feature request
+description: Suggest an improvement for release-notes-check
+title: "[Feature]: "
+labels: ["minor"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting an improvement.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: Briefly describe the feature
+      placeholder: Add support for...
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What problem does this solve?
+      placeholder: It is hard to...
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe the change you want
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Describe any workarounds or other approaches
+    validations:
+      required: false
+
+  - type: input
+    id: version
+    attributes:
+      label: Action version
+      description: Which version are you using?
+      placeholder: v1.1
+    validations:
+      required: false
