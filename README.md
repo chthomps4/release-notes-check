@@ -41,31 +41,7 @@ Create these labels in your repository before using the action:
 | `exempt_labels` | No | `docs,internal,no-release-notes` | Comma-separated labels that skip the check |
 | `breaking_labels` | No | `breaking,major` | Comma-separated labels that indicate a breaking change |
 
-## Example workflow for this repository
-
-~~~yaml
-name: Release Notes Check
-
-on:
-  pull_request:
-    types: [opened, edited, synchronize, labeled, unlabeled]
-
-jobs:
-  release-notes-check:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: read
-    steps:
-      - uses: chthomps4/release-notes-check@v1.2
-        with:
-          require_semver_label: "true"
-          release_note_heading: "## Release note"
-          exempt_labels: "docs,internal,no-release-notes"
-          breaking_labels: "breaking,major"
-~~~
-
-## Example workflow for another repository
+## Example workflow
 
 Create `.github/workflows/release-notes-check.yml` in the repository that wants to use this action:
 
@@ -91,6 +67,10 @@ jobs:
           exempt_labels: "docs,internal,no-release-notes"
           breaking_labels: "breaking,major"
 ~~~
+
+A copy-paste example file is also included at:
+
+- `examples/release-notes-check.yml`
 
 ## Pull request body example
 
