@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and general discussion
+    url: https://github.com/chthomps4/release-notes-check/discussions
+    about: Ask questions or discuss ideas here.
