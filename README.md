@@ -1,5 +1,7 @@
 # release-notes-check
 
+[![Test Release Notes Check](https://github.com/chthomps4/release-notes-check/actions/workflows/test.yml/badge.svg)](https://github.com/chthomps4/release-notes-check/actions/workflows/test.yml)
+
 GitHub Action to enforce release note metadata on pull requests.
 
 ## What it checks
