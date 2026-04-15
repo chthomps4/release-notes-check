@@ -68,19 +68,26 @@ jobs:
           breaking_labels: "breaking,major"
 ~~~
 
-A copy-paste example file is also included at:
+A copy-paste workflow example is included at:
 
 - `examples/release-notes-check.yml`
 
 ## Pull request body example
 
+Use this PR body format:
+
 ~~~md
 ## Release note
-Adds validation for PR release metadata and blocks placeholder release notes.
+Describe the user-facing change in 1 to 3 sentences.
+Explain what changed and why it matters.
 
 ## Breaking change
 None.
 ~~~
+
+A copy-paste PR template example is included at:
+
+- `examples/pull-request-template.md`
 
 ## This will fail
 
