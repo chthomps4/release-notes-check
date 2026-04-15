@@ -1,0 +1,20 @@
+name: Test Release Notes Check
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, labeled, unlabeled]
+
+jobs:
+  test-action:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+    steps:
+      - name: Run local action
+        uses: ./
+        with:
+          require_semver_label: "true"
+          release_note_heading: "## Release note"
+          exempt_labels: "docs,internal,no-release-notes"
+          breaking_labels: "breaking,major"
