@@ -1,0 +1,63 @@
+name: Bug report
+description: Report a problem with release-notes-check
+title: "[Bug]: "
+labels: ["patch"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: Briefly describe the problem
+      placeholder: The action fails when...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: List the exact steps
+      placeholder: |
+        1. Add label...
+        2. Open pull request...
+        3. See failure...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should have happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What happened instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or screenshots
+      description: Paste workflow logs or add screenshots if helpful
+    validations:
+      required: false
+
+  - type: input
+    id: version
+    attributes:
+      label: Action version
+      description: Which version are you using?
+      placeholder: v1.1
+    validations:
+      required: true
