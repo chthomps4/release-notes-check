@@ -57,7 +57,7 @@ jobs:
       contents: read
       pull-requests: read
     steps:
-      - uses: chthomps4/release-notes-check@v1.1
+      - uses: chthomps4/release-notes-check@v1.2
         with:
           require_semver_label: "true"
           release_note_heading: "## Release note"
@@ -84,7 +84,7 @@ jobs:
       pull-requests: read
     steps:
       - name: Run release notes check
-        uses: chthomps4/release-notes-check@v1.1
+        uses: chthomps4/release-notes-check@v1.2
         with:
           require_semver_label: "true"
           release_note_heading: "## Release note"
