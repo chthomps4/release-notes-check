@@ -1,0 +1,20 @@
+name: Release Notes Check
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, labeled, unlabeled]
+
+jobs:
+  release-notes-check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+    steps:
+      - name: Run release notes check
+        uses: chthomps4/release-notes-check@v1.2
+        with:
+          require_semver_label: "true"
+          release_note_heading: "## Release note"
+          exempt_labels: "docs,internal,no-release-notes"
+          breaking_labels: "breaking,major"
